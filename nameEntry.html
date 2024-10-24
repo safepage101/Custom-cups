@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="name-entry-body">
+
+    <div class="wrapper">
+        <form id="nameForm"> 
+            <h1>Welcome!</h1>
+
+            <div class="input-box">
+                <input type="text" id="customerName" placeholder="Firstname" maxlength="15" required>
+                <i class='bx bxs-user'></i>       
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="customerLastname" placeholder="Lastname" maxlength="15" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <button type="submit" class="btn" id="submitButton">
+    <span class="submit-text">Submit</span>
+    <div class="loader" id="loader" style="display: none;"></div>
+</button>
+
+        </form> 
+
+    </div>
+
+    <p id="error" style="color:red;"></p>
+
+    <script src="nameEntry.js"></script> 
+</body>
+</html>
