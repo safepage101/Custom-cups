@@ -38,7 +38,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
             const cupId = urlParams.get('cupId');
 
             // Update history to prevent going back to name entry page
-            window.history.replaceState(null, '', `index.html?customer=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&2hvr82isbhd02jm182jne82owjrgo20wye72k&wallpaper=Wallpaper${cupId}&8282osgd71ivdwp0mfbgq92`);
+            window.history.replaceState(null, '', `index.html?customer=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&wallpaper=Wallpaper${cupId}`);
 
             // Redirect to the thank-you page
             window.location.href = `index.html?customer=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&wallpaper=Wallpaper${cupId}`;
