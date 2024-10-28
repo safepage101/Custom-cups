@@ -12,84 +12,69 @@ const quotes = {
     10: "Collaboration can lead to amazing discoveries. Work together with your classmates to inspire each other. Together, you can achieve more than you ever imagined."
 };
 
-// Function to extract the cupId from the wallpaper parameter
 function getCupIdFromWallpaper(wallpaper) {
-    // Use a regular expression to extract the numeric part after 'Wallpaper'
     const match = wallpaper.match(/\d+/);
-    return match ? parseInt(match[0], 10) : null; // Return the number part or null if not found
+    return match ? parseInt(match[0], 10) : null; 
 }
 
-// URL Parameters for Dynamic Content
 const urlParams = new URLSearchParams(window.location.search);
-const customer = urlParams.get('customer') || "Valued Customer"; // Default to "Valued Customer" if no parameter
-const wallpaper = urlParams.get('wallpaper') || "Wallpaper1"; // Default to Wallpaper1 if no parameter
+const customer = urlParams.get('customer') || "Valued Customer"; 
+const wallpaper = urlParams.get('wallpaper') || "Wallpaper1"; 
 
-// Extract cupId from wallpaper
 const cupId = getCupIdFromWallpaper(wallpaper);
 
-// Set customer name dynamically after DOM loads
 document.addEventListener('DOMContentLoaded', function () {
     if (customer) {
         document.getElementById('greeting').innerText = `Thank you, ${customer}!`;
     }
-
-    // Set the dynamic quote based on cupId
     if (cupId) {
         setDynamicQuote(cupId);
     } else {
         document.getElementById('dynamicquote').innerText = "Stay motivated!";
     }
-
-    // Set wallpaper image and download link dynamically
+    
     document.getElementById('wallpaperImage').src = `images/${wallpaper}.jpg`;
     document.getElementById('wallpaperDownloadLink').href = `images/${wallpaper}.jpg`;
 
-    // Set the download attribute for the link
     document.getElementById('wallpaperDownloadLink').setAttribute('download', '12 - GATES.jpg');
 });
 
-// Function to set the dynamic quote for slide 2
 function setDynamicQuote(cupId) {
-    const selectedQuote = quotes[cupId] || "Unable to find the qoute(⁠╯⁠︵⁠╰⁠,⁠)"; // Fallback quote if cupId doesn't match
+    const selectedQuote = quotes[cupId] || "Unable to find the qoute(⁠╯⁠︵⁠╰⁠,⁠)"; 
     document.getElementById('dynamicquote').innerText = selectedQuote;
 }
 
-// Initialize with the first slide
 let slideIndex = 0;
 const slides = document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slide').length;
 
 function showSlide(index) {
-    const offset = -index * 100; // Each slide is 100% width
+    const offset = -index * 100; 
     slides.style.transform = `translateX(${offset}%)`;
 
     const prevButton = document.querySelector('.prev-button');
 
     if (index === 0) {
-        prevButton.style.visibility = 'hidden'; // Hide on the first slide
+        prevButton.style.visibility = 'hidden'; 
     } else {
-        prevButton.style.visibility = 'visible'; // Show on slides 2, 3, etc.
+        prevButton.style.visibility = 'visible'; 
     }
 }
 
-// Function to navigate to the next slide
 function nextSlide() {
-    slideIndex = (slideIndex + 1) % totalSlides; // Cycle to next slide
+    slideIndex = (slideIndex + 1) % totalSlides; 
     showSlide(slideIndex);
 }
 
-// Function to navigate to the previous slide
 function prevSlide() {
     if (slideIndex > 0) {
-        slideIndex = (slideIndex - 1) % totalSlides; // Move to the previous slide only if not on the first slide
+        slideIndex = (slideIndex - 1) % totalSlides; 
     }
     showSlide(slideIndex);
 }
 
-// Initialize the first slide
 showSlide(slideIndex);
 
-// Handle touch/swipe events for mobile
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -101,12 +86,11 @@ function handleTouchEnd(event) {
     touchEndX = event.changedTouches[0].screenX;
 
     if (touchEndX < touchStartX) {
-        nextSlide(); // Swiped left, go to the next slide
+        nextSlide(); 
     } else if (touchEndX > touchStartX) {
-        prevSlide(); // Swiped right, go to the previous slide
+        prevSlide(); 
     }
 }
 
-// Attach touch event listeners
 slides.addEventListener('touchstart', handleTouchStart);
 slides.addEventListener('touchend', handleTouchEnd);
