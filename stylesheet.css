@@ -202,7 +202,7 @@ img {
 }
 
 .wallpaperh2 {
-    margin-right: 5px; /* Space between the heading and the button */
+    margin-right: 5px;
     font-size: 24px;
 }
 
@@ -219,12 +219,10 @@ img {
     transition: background-color 0.3s;
 }
 
-/* Hover effect for the button */
 .downloadButton:hover {
     background-color: #0056b3;
 }
 
-/* Ensure the link looks like part of the button */
 .downloadButton a {
     text-decoration: none;
     color: white;
