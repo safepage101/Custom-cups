@@ -233,7 +233,7 @@ img {
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin-top: 20px;
+    margin: auto;
 }
 
 .feedback-container img {
@@ -255,4 +255,5 @@ img {
     padding: 10px;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.5);
+    padding-top:20px;
 }
