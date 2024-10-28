@@ -243,7 +243,7 @@ img {
 
 .feedback-overlay {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -255,5 +255,4 @@ img {
     padding: 10px;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.5);
-    padding-top:20px;
 }
