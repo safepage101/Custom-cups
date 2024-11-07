@@ -114,12 +114,10 @@ img {
     display: inline-block;
 }
 
-/*this is for index.html*/
+/* This is for index.html */
 
-/*this is for index.html*/
-
-.thankyoupagebody{
-       font-family: "Lucida Console", "Courier New", monospace;
+.thankyoupagebody {
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .slider {
@@ -128,23 +126,30 @@ img {
     position: relative;
     overflow: hidden;
     margin: auto;
+    height: auto;
 }
 
 .slides {
     display: flex;
     transition: transform 0.5s ease;
+    width: 100%;
 }
 
 .slide {
     min-width: 100%;
     box-sizing: border-box;
     max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .slider img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    max-height: 100%;
 }
 
 .navigation {
@@ -198,7 +203,6 @@ img {
     display: inline;
 }
 
-
 .h2btn-container {
     display: flex;
     justify-content: flex-start;
@@ -231,6 +235,7 @@ img {
     text-decoration: none;
     color: white;
 }
+
 .feedback-container {
     position: relative;
     width: 100%;
@@ -259,26 +264,38 @@ img {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Media query for larger screens (desktop mode) */
 @media (min-width: 1024px) {
     .thankyoupagebody .navigation {
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
-        width: auto; /* Auto width for navigation */
+        width: auto;
     }
 
     .thankyoupagebody .navigation button {
-        padding: 15px; /* Adjust padding for desktop */
+        padding: 15px;
     }
 
     .thankyoupagebody .navigation .prev-button {
-        visibility: visible; /* Ensure prev button is visible on desktop if needed */
+        visibility: visible;
+    }
+
+    .thankyoupagebody .slider {
+        height: auto;
+        max-height: 100vh;
+    }
+
+    .thankyoupagebody .slide {
+        height: 100%;
+    }
+
+    .thankyoupagebody .slider img {
+        object-fit: contain;
+        max-height: 100%;
     }
 }
 
-/* Mobile styles */
 @media (max-width: 1023px) {
     .thankyoupagebody .navigation {
         position: fixed;
@@ -295,6 +312,19 @@ img {
     }
 
     .thankyoupagebody .navigation .prev-button {
-        visibility: hidden; /* Keep prev button hidden on mobile */
+        visibility: hidden;
+    }
+
+    .thankyoupagebody .slider {
+        height: auto;
+    }
+
+    .thankyoupagebody .slide {
+        height: 100%;
+    }
+
+    .thankyoupagebody .slider img {
+        object-fit: contain;
+        max-height: 100%;
     }
 }
