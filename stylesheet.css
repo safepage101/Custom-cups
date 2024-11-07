@@ -116,6 +116,8 @@ img {
 
 /*this is for index.html*/
 
+/*this is for index.html*/
+
 .thankyoupagebody{
        font-family: "Lucida Console", "Courier New", monospace;
 }
@@ -255,4 +257,44 @@ img {
     padding: 10px;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Media query for larger screens (desktop mode) */
+@media (min-width: 1024px) {
+    .thankyoupagebody .navigation {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: auto; /* Auto width for navigation */
+    }
+
+    .thankyoupagebody .navigation button {
+        padding: 15px; /* Adjust padding for desktop */
+    }
+
+    .thankyoupagebody .navigation .prev-button {
+        visibility: visible; /* Ensure prev button is visible on desktop if needed */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 1023px) {
+    .thankyoupagebody .navigation {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .thankyoupagebody .navigation button {
+        padding: 10px;
+    }
+
+    .thankyoupagebody .navigation .prev-button {
+        visibility: hidden; /* Keep prev button hidden on mobile */
+    }
 }
