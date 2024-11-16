@@ -119,7 +119,8 @@ img {
 /*this is for index.html*/
 
 .thankyoupagebody{
-       font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: url('images/thankyoupage..jpg') no-repeat center center fixed;
 }
 
 .slider {
