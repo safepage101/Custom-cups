@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function setDynamicQuote(cupId) {
     const selectedQuote = quotes[cupId] || "Unable to find the qoute(⁠╯⁠︵⁠╰⁠,⁠)"; 
-    document.getElementById('dynamicquote').innerText = '"${selectedQuote}"';
+    document.getElementById('dynamicquote').innerText = `"${selectedQuote}"`;
 }
 
 let slideIndex = 0;
