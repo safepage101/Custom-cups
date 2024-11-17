@@ -7,6 +7,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const nameInput = document.getElementById('customerName').value.trim();
     const lastnameInput = document.getElementById('customerLastname').value.trim();
 
+    
     loader.style.display = 'inline-block';
     submitText.style.display = 'none';
     
@@ -23,10 +24,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const capitalizedName = nameInput.charAt(0).toUpperCase() + nameInput.slice(1).toLowerCase();
     const capitalizedLastname = lastnameInput.charAt(0).toUpperCase() + lastnameInput.slice(1).toLowerCase();
 
-    // Get the device name from the user agent (for example)
-    const deviceName = navigator.userAgent;
-
-    fetch(`https://script.google.com/macros/s/AKfycbw_F_UXtbUwx6yuYMyEKgagWkHBJyCx2DEEJX_CfwFpR17TFhfFxcyLQijuqSZ62hiY/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&deviceName=${encodeURIComponent(deviceName)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbwAm7eybxuPELg__VEiyZJDwvkHA-T3ZenCBYrPfrkGvOBAq-aCntABrnLfoXE8I6IrXA/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
