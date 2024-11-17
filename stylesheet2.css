@@ -144,23 +144,37 @@ h2{
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.5);
 }
+.musicContent {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    word-wrap: break-word; 
+    padding-bottom:70%;
+}
 
-/* Media query for larger screens (desktop mode) */
+.musicContent p {
+    margin: 0;
+    white-space: normal; 
+}
+
+
 @media (min-width: 1024px) {
     .thankyoupagebody .navigation {
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
-        width: auto; /* Auto width for navigation */
+        width: auto; 
     }
 
     .thankyoupagebody .navigation button {
-        padding: 15px; /* Adjust padding for desktop */
+        padding: 15px; 
     }
 
     .thankyoupagebody .navigation .prev-button {
-        visibility: visible; /* Ensure prev button is visible on desktop if needed */
+        visibility: visible; 
     }
 }
 
@@ -181,6 +195,6 @@ h2{
     }
 
     .thankyoupagebody .navigation .prev-button {
-        visibility: hidden; /* Keep prev button hidden on mobile */
+        visibility: hidden;
     }
 }
