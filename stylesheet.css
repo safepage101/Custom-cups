@@ -121,7 +121,7 @@ img {
 .thankyoupagebody{
     font-family: "Lucida Console", "Courier New", monospace;
     background: url('images/thankyoupage.png') no-repeat center center fixed;
-    background-size: contain;
+    
 }
 
 .slider {
