@@ -150,8 +150,7 @@ h2{
     padding: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
-    word-wrap: break-word; 
-    padding-bottom:70%;
+    word-wrap: break-word;
 }
 
 .musicContent p {
