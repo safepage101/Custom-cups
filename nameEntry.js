@@ -1,4 +1,3 @@
-That is the script and this is the java script. I also wants to record the device name of the user that logs in and its location i also want to record the time stamp on philipine based time how can i do that
 
 document.getElementById('nameForm').addEventListener('submit', function (event) {
     event.preventDefault(); 
