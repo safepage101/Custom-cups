@@ -1,4 +1,4 @@
-
+ 
 
 img {
   user-select: none;
@@ -22,7 +22,7 @@ img {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('images/Background.gif') no-repeat center center fixed;
+    background: url('images/Background.png') no-repeat center center fixed;
     background-size: cover; 
 }
 
