@@ -121,6 +121,7 @@ img {
 .thankyoupagebody{
     font-family: "Lucida Console", "Courier New", monospace;
     background: url('images/thankyoupage.png') no-repeat center center fixed;
+    background-size: contain;
 }
 
 .slider {
@@ -183,7 +184,7 @@ img {
 
 .quote-overlay {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
