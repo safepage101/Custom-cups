@@ -9,6 +9,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
 
     loader.style.display = 'inline-block';
     submitText.style.display = 'none';
+    
     submitButton.disabled = true;
 
     if (nameInput.length > 15 || lastnameInput.length > 15) {
@@ -21,8 +22,10 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
 
     const capitalizedName = nameInput.charAt(0).toUpperCase() + nameInput.slice(1).toLowerCase();
     const capitalizedLastname = lastnameInput.charAt(0).toUpperCase() + lastnameInput.slice(1).toLowerCase();
-
-    fetch(`https://script.google.com/macros/s/AKfycbzuTyCL5bfJ_WfECKqFcSTJOpChuXEtv1ti4Hyd60usFrKuUir9zj4GiTGgJPTYgkalUA/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}`)
+    const device = navigator.userAgent; 
+    const screenResolution = `${window.screen.width}x${window.screen.height}`; 
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; 
+    fetch(`https://script.google.com/macros/s/AKfycbwODZDNOjJJsVGIwLIINNA7TqVroMhpA2ytF4Gn2jIbDmQpKwos6BaxkjjcUFpVV5IAig/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&device=${encodeURIComponent(device)}&screenResolution=${encodeURIComponent(screenResolution)}&timezone=${encodeURIComponent(timezone)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
@@ -40,3 +43,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
             submitText.style.display = 'inline-block'; 
         });
 });
+
+
+
+
