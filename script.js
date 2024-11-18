@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     document.getElementById('wallpaperImage').src = `images/${wallpaper}.jpg`;
+    wallpaperImage.style.userSelect = 'none'; 
     document.getElementById('wallpaperDownloadLink').href = `images/${wallpaper}.jpg`;
 
     document.getElementById('wallpaperDownloadLink').setAttribute('download', '12 - GATES.jpg');
@@ -167,7 +168,7 @@ showSlide(slideIndex);
 
 let touchStartX = 0;
 let touchEndX = 0;
-const slideThreshold = 30; // Threshold in pixels (you can adjust this value)
+const slideThreshold = 30; 
 
 function handleTouchStart(event) {
     touchStartX = event.changedTouches[0].screenX;
