@@ -148,7 +148,7 @@ h2{
     width: 100%; 
     box-sizing: border-box; 
     padding: 10px;
-    background-color: #c9daf8;
+    background-color: #755e85;
     border: 1px solid #ccc;
     word-wrap: break-word;
 }
@@ -161,7 +161,7 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 79%;
+  height: 75%;
   background-color: #ffe6f2; 
 }
 
