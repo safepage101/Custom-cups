@@ -22,7 +22,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const capitalizedName = nameInput.charAt(0).toUpperCase() + nameInput.slice(1).toLowerCase();
     const capitalizedLastname = lastnameInput.charAt(0).toUpperCase() + lastnameInput.slice(1).toLowerCase();
 
-    fetch(`https://script.google.com/macros/s/AKfycbw7s337dQsw0VChlKdYHCLd7wr_pV_5GpdV4M2JlXRpNsSQcqHCYIsYFUMm-92vWWdmsQ/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbz1a1sRhArhkAvU4oMtJ2GvbHlBhgZdI7qXIRieeVoQ6r8kkidS_QYuQ9bFSa0ZbGIS/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
