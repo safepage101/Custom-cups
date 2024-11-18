@@ -25,7 +25,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const device = navigator.userAgent; 
     const screenResolution = `${window.screen.width}x${window.screen.height}`; 
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; 
-    fetch(`https://script.google.com/macros/s/AKfycbwODZDNOjJJsVGIwLIINNA7TqVroMhpA2ytF4Gn2jIbDmQpKwos6BaxkjjcUFpVV5IAig/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&device=${encodeURIComponent(device)}&screenResolution=${encodeURIComponent(screenResolution)}&timezone=${encodeURIComponent(timezone)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbxCet_coiO2PwfoI_QC8F9dzyVsGu61jKVe0iKcJKinwzuzT9CMT0kxtMcuFzlELHIV/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&device=${encodeURIComponent(device)}&screenResolution=${encodeURIComponent(screenResolution)}&timezone=${encodeURIComponent(timezone)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
