@@ -167,6 +167,7 @@ showSlide(slideIndex);
 
 let touchStartX = 0;
 let touchEndX = 0;
+const slideThreshold = 30; // Threshold in pixels (you can adjust this value)
 
 function handleTouchStart(event) {
     touchStartX = event.changedTouches[0].screenX;
@@ -174,11 +175,13 @@ function handleTouchStart(event) {
 
 function handleTouchEnd(event) {
     touchEndX = event.changedTouches[0].screenX;
-
-    if (touchEndX < touchStartX) {
-        nextSlide(); 
-    } else if (touchEndX > touchStartX) {
-        prevSlide(); 
+    const touchDistance = touchEndX - touchStartX;
+    if (Math.abs(touchDistance) > slideThreshold) {
+        if (touchDistance < 0) {
+            nextSlide(); 
+        } else {
+            prevSlide(); 
+        }
     }
 }
 
