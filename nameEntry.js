@@ -29,7 +29,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // Time zone
 
     // Updated fetch with additional device parameters
-    fetch(`https://script.google.com/macros/s/AKfycbzuTyCL5bfJ_WfECKqFcSTJOpChuXEtv1ti4Hyd60usFrKuUir9zj4GiTGgJPTYgkalUA/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&device=${encodeURIComponent(device)}&screenResolution=${encodeURIComponent(screenResolution)}&timezone=${encodeURIComponent(timezone)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbxR8FQgwD_4C8qlSy5K_l3s0OdHqo0EIoejm9Dft6L7kdPe6O-XazU1obDj-KLeOZo2lg/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&device=${encodeURIComponent(device)}&screenResolution=${encodeURIComponent(screenResolution)}&timezone=${encodeURIComponent(timezone)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
