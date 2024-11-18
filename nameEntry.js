@@ -7,7 +7,6 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const nameInput = document.getElementById('customerName').value.trim();
     const lastnameInput = document.getElementById('customerLastname').value.trim();
 
-    
     loader.style.display = 'inline-block';
     submitText.style.display = 'none';
     
@@ -24,7 +23,13 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const capitalizedName = nameInput.charAt(0).toUpperCase() + nameInput.slice(1).toLowerCase();
     const capitalizedLastname = lastnameInput.charAt(0).toUpperCase() + lastnameInput.slice(1).toLowerCase();
 
-    fetch(`https://script.google.com/macros/s/AKfycbzuTyCL5bfJ_WfECKqFcSTJOpChuXEtv1ti4Hyd60usFrKuUir9zj4GiTGgJPTYgkalUA/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}`)
+    // Capture device data
+    const device = navigator.userAgent; // Browser and device info
+    const screenResolution = `${window.screen.width}x${window.screen.height}`; // Screen resolution
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // Time zone
+
+    // Updated fetch with additional device parameters
+    fetch(`https://script.google.com/macros/s/AKfycbzuTyCL5bfJ_WfECKqFcSTJOpChuXEtv1ti4Hyd60usFrKuUir9zj4GiTGgJPTYgkalUA/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&device=${encodeURIComponent(device)}&screenResolution=${encodeURIComponent(screenResolution)}&timezone=${encodeURIComponent(timezone)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
