@@ -9,7 +9,6 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
 
     loader.style.display = 'inline-block';
     submitText.style.display = 'none';
-    
     submitButton.disabled = true;
 
     if (nameInput.length > 15 || lastnameInput.length > 15) {
@@ -23,13 +22,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const capitalizedName = nameInput.charAt(0).toUpperCase() + nameInput.slice(1).toLowerCase();
     const capitalizedLastname = lastnameInput.charAt(0).toUpperCase() + lastnameInput.slice(1).toLowerCase();
 
-    // Capture device data
-    const device = navigator.userAgent; // Browser and device info
-    const screenResolution = `${window.screen.width}x${window.screen.height}`; // Screen resolution
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // Time zone
-
-    // Updated fetch with additional device parameters
-    fetch(`https://script.google.com/macros/s/AKfycbxR8FQgwD_4C8qlSy5K_l3s0OdHqo0EIoejm9Dft6L7kdPe6O-XazU1obDj-KLeOZo2lg/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&device=${encodeURIComponent(device)}&screenResolution=${encodeURIComponent(screenResolution)}&timezone=${encodeURIComponent(timezone)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbw7s337dQsw0VChlKdYHCLd7wr_pV_5GpdV4M2JlXRpNsSQcqHCYIsYFUMm-92vWWdmsQ/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
