@@ -187,3 +187,15 @@ function handleTouchEnd(event) {
 
 slides.addEventListener('touchstart', handleTouchStart);
 slides.addEventListener('touchend', handleTouchEnd);
+const musicButton = document.getElementById('musicButton');
+const music = document.getElementById('music');
+
+musicButton.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    musicButton.textContent = '🎵 Pause Music';
+  } else {
+    music.pause();
+    musicButton.textContent = '🎵 Play Music';
+  }
+});
