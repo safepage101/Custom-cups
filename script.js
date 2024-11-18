@@ -128,7 +128,7 @@ document.getElementById('wallpaperDownloadLink').href = `images/${wallpaper}.jpg
 document.getElementById('wallpaperDownloadLink').setAttribute('download', 'Have A Great Day Ahead :))');
 
 document.getElementById('wallpaperDownloadLink').addEventListener('click', function () {
-    alert('The wallpaper is now in your gallery.');
+    alert('Please check your gallery after confirming the download.');
 });
 });
 
