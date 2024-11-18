@@ -124,19 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 document.getElementById('wallpaperImage').src = `images/${wallpaper}.jpg`;
-wallpaperImage.style.userSelect = 'none'; 
 document.getElementById('wallpaperDownloadLink').href = `images/${wallpaper}.jpg`;
-document.getElementById('wallpaperDownloadLink').setAttribute('download', 'Have A Great Day Ahead.jpg');
+document.getElementById('wallpaperDownloadLink').setAttribute('download', 'Have A Great Day Ahead :))');
 
-document.getElementById('wallpaperDownloadLink').addEventListener('click', function (event) {
-    const confirmDownload = confirm('Do you want to download this wallpaper?');
-    if (!confirmDownload) {
-        event.preventDefault();
-    } else {
-        setTimeout(() => {
-            alert('The wallpaper is now in your gallery :)');
-        }, 200);
-    }
+document.getElementById('wallpaperDownloadLink').addEventListener('click', function () {
+    alert('The wallpaper is now in your gallery.');
 });
 });
 
