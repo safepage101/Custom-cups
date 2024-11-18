@@ -148,7 +148,7 @@ h2{
     width: 100%; 
     box-sizing: border-box; 
     padding: 10px;
-    background-color: #755e85;
+    background-color: #ffd79c;
     border: 1px solid #ccc;
     word-wrap: break-word;
 }
@@ -161,8 +161,8 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75%;
-  background-color: #ffe6f2; 
+  height: 70%;
+  background-color: #859cd6; 
 }
 
 .cute-music-button {
