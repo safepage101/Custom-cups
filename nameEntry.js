@@ -1,5 +1,6 @@
 document.getElementById('nameForm').addEventListener('submit', function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
+    
     const submitButton = document.querySelector('button[type="submit"]');
     const loader = document.getElementById('loader');
     const submitText = document.querySelector('.submit-text');
@@ -24,8 +25,8 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const capitalizedLastname = lastnameInput.charAt(0).toUpperCase() + lastnameInput.slice(1).toLowerCase();
     const currentDateTime = new Date().toISOString();
 
-    fetch(`https://script.google.com/macros/s/AKfycbxpe_2l501ALs-shEMq5iluwdpAeBrHk0ZoIiWei6E/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&datetime=${encodeURIComponent(currentDateTime)}`)
-        .then(response => response.text()) 
+    fetch(`https://script.google.com/macros/s/AKfycbwVrMjQS5FpSIzix2mG-s4oH0LGdr4QghSuoR-4Ci0dUs-z-m05P0bCHAAAwN-jd7E3/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&datetime=${encodeURIComponent(currentDateTime)}`)
+        .then(response => response.text())
         .then(data => {
             console.log(data); 
             const urlParams = new URLSearchParams(window.location.search);
