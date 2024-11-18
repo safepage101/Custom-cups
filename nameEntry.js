@@ -24,7 +24,7 @@ document.getElementById('nameForm').addEventListener('submit', function (event) 
     const capitalizedLastname = lastnameInput.charAt(0).toUpperCase() + lastnameInput.slice(1).toLowerCase();
     const currentDateTime = new Date().toISOString();
 
-    fetch(`https://script.google.com/macros/s/AKfycbxKHvkR2369LpF1sRxfC5IMYeG7QKedNJX4mup0WS_H4QsjFGtxqzFDXPEa7QgY6j7M/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&datetime=${encodeURIComponent(currentDateTime)}`)
+    fetch(`https://script.google.com/macros/s/AKfycbxpe_2l501ALs-shEMq5iluwdpAeBrHk0ZoIiWei6E/exec?name=${encodeURIComponent(capitalizedName)}&lastname=${encodeURIComponent(capitalizedLastname)}&datetime=${encodeURIComponent(currentDateTime)}`)
         .then(response => response.text()) 
         .then(data => {
             console.log(data); 
