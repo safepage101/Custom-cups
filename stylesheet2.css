@@ -71,41 +71,6 @@ h2{
     max-width: 600px;
     margin: auto;
 }
-.glowing-text {
-  color: rgb(160, 32, 240); 
-  text-shadow: 0 0 10px rgb(160, 32, 240), 0 0 20px rgb(160, 32, 240), 0 0 30px rgb(160, 32, 240);
-  animation: glow 3s infinite, changeColor 5s infinite;
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 10px rgb(160, 32, 240), 0 0 20px rgb(160, 32, 240), 0 0 30px rgb(160, 32, 240);
-  }
-  50% {
-    text-shadow: 0 0 20px rgb(160, 32, 240), 0 0 30px rgb(160, 32, 240), 0 0 40px rgb(160, 32, 240);
-  }
-  100% {
-    text-shadow: 0 0 10px rgb(160, 32, 240), 0 0 20px rgb(160, 32, 240), 0 0 30px rgb(160, 32, 240);
-  }
-}
-
-@keyframes changeColor {
-  0% {
-    color: rgb(160, 32, 240); /* Purple */
-  }
-  25% {
-    color: rgb(0, 255, 255); /* Cyan */
-  }
-  50% {
-    color: rgb(255, 20, 147); /* Neon Pink */
-  }
-  75% {
-    color: rgb(255, 140, 0); /* Neon Orange */
-  }
-  100% {
-    color: rgb(160, 32, 240); /* Back to Purple */
-  }
-      
 #quoteImage {
     width: 100%;
     height: auto;
