@@ -158,10 +158,11 @@ h2{
     width: 100%; 
     box-sizing: border-box; 
     padding: 10px;
-    background-color: #8c71f0;
+    background-color: #c1b1fc;
     border: 1px solid #ccc;
     word-wrap: break-word;
     height:720px;
+    font-size:20px;
 }
 
 .musicContent p {
