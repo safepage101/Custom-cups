@@ -72,8 +72,6 @@ h2{
     margin: auto;
 }
 .glowing-text {
-  font-size: 2em;
-  font-weight: bold;
   color: rgb(160, 32, 240); 
   text-shadow: 0 0 10px rgb(160, 32, 240), 0 0 20px rgb(160, 32, 240), 0 0 30px rgb(160, 32, 240);
   animation: glow 3s infinite, changeColor 5s infinite;
@@ -107,7 +105,7 @@ h2{
   100% {
     color: rgb(160, 32, 240); /* Back to Purple */
   }
-      }
+      
 #quoteImage {
     width: 100%;
     height: auto;
