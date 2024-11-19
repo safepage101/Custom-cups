@@ -162,7 +162,7 @@ h2{
     background-color: #ffd79c;
     border: 1px solid #ccc;
     word-wrap: break-word;
-    height:700px;
+    height:720px;
 }
 
 .musicContent p {
@@ -173,7 +173,7 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 700px;
+  height: 720px;
   background-color: #859cd6; 
 }
 
