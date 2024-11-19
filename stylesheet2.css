@@ -175,6 +175,7 @@ h2{
   align-items: center;
   height: 720px;
   background-color: #859cd6; 
+  flex-direction:column;
 }
 
 .cute-music-button {
