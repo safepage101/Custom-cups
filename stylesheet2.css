@@ -193,7 +193,7 @@ h2{
   border-radius: 50px;
   padding: 15px 25px;
   font-size: 16px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   cursor: pointer;
   box-shadow: 0 5px 10px rgba(255, 128, 179, 0.5);
   transition: transform 0.2s, box-shadow 0.2s;
