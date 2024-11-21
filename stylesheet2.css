@@ -1,13 +1,9 @@
-html, body, .thankyoupagebody {
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
-    -webkit-touch-callout: none !important;
-    -webkit-user-drag: none !important;
-    touch-action: none !important;
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  pointer-events: none;
 }
-
 
 .thankyoupagebody{
     font-family: "Lucida Console", "Courier New", monospace;
