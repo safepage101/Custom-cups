@@ -81,7 +81,11 @@ h2{
     width: 100%;
     height: auto;
 }
-
+.cat-overlay img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .quote-overlay {
     position: absolute;
     top: 50%;
